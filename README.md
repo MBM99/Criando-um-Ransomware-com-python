@@ -1,0 +1,1 @@
+# Criando-um-Ransomware-com-python
